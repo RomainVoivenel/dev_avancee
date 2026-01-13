@@ -6,27 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.RankModule = void 0;
 const common_1 = require("@nestjs/common");
-const core_1 = require("@nestjs/core");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const rank_module_1 = require("./rank/rank.module");
-let AppModule = class AppModule {
+const rank_controller_1 = require("./rank.controller");
+const rank_service_1 = require("./rank.service");
+let RankModule = class RankModule {
 };
-exports.AppModule = AppModule;
-exports.AppModule = AppModule = __decorate([
+exports.RankModule = RankModule;
+exports.RankModule = RankModule = __decorate([
     (0, common_1.Module)({
-        imports: [
-            core_1.RouterModule.register([
-                {
-                    path: '/rank',
-                    module: rank_module_1.RankModule,
-                },
-            ]),
-        ],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        controllers: [rank_controller_1.RankController],
+        providers: [rank_service_1.RankService]
     })
-], AppModule);
-//# sourceMappingURL=app.module.js.map
+], RankModule);
+//# sourceMappingURL=rank.module.js.map
