@@ -6,6 +6,7 @@
   "author": "",
   "license": "UNLICENSED",
   "scripts": {
+    "apps:server:dev": "pnpm run --filter ./apps/realtime-elo-ranker-server start:dev",
     "apps:client:dev": "pnpm run --filter ./apps/realtime-elo-ranker-client dev",
     "apps:api-mock:start": "pnpm run --filter ./apps/realtime-elo-ranker-api-mock start",
     "libs:ui:build": "pnpm run --filter ./libs/ui build",
@@ -13,6 +14,7 @@
     "docs:swagger:start": "pnpm run --filter ./docs/swagger start"
   },
   "devDependencies": {
+    "@nestjs/cli": "^11.0.14",
     "generate-react-cli": "catalog:",
     "motion": "catalog:",
     "next": "catalog:",
